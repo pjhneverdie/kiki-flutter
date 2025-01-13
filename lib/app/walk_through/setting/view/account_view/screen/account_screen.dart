@@ -75,27 +75,12 @@ class _AccountScreenState extends State<AccountScreen> {
   }
 
   @override
-  void dispose() {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return BlocConsumer(
       bloc: _loginCubit,
       listener: (context, state) {
         if (state is LoginStateLogout) {
           context.go(TermsOfUseScreen.PATH);
-        } else if (state is LoginStateOnException) {
-          ToastUtil.showAppDefaultToast(
-            context,
-            message: state.customException.exceptionCode.message,
-          );
         }
       },
       builder: (context, state) {

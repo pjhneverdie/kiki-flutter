@@ -122,11 +122,21 @@ abstract class GoRouterModule {
           ),
         ],
         redirect: (context, state) async {
-          /// 카카오톡 -> 앱 딥링킹 리다이렉트
-          ///
           if (state.uri.toString().startsWith("kakao")) {
+            /// 카카오톡 -> 앱
+            ///
             return HomeScreen.PATH;
             // return tracker.currentLocation;
+          } else if (state.uri.toString().startsWith("kiki")) {
+            /// 앱링크 호출 실패 -> 앱 스킴
+            ///
+            String? base64 = state.uri.queryParameters["tokens"];
+
+            if (base64 == null) {
+              return LoginScreen.DEEP_LINK_PATH;
+            }
+
+            return "${LoginScreen.DEEP_LINK_PATH}?tokens=$base64";
           } else {
             return null;
           }
