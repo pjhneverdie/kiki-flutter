@@ -4,7 +4,6 @@ class _WithdrawButton extends StatelessWidget {
   final void Function() _onTap;
 
   const _WithdrawButton({
-    super.key,
     required void Function() onTap,
   }) : _onTap = onTap;
 

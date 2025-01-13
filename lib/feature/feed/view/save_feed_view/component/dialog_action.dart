@@ -4,7 +4,6 @@ class _FeedFormAction extends StatelessWidget {
   final void Function()? _onActionTap;
 
   const _FeedFormAction({
-    super.key,
     required void Function()? onActionTap,
   }) : _onActionTap = onActionTap;
 

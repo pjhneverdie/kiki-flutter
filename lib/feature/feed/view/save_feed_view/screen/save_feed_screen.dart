@@ -13,7 +13,6 @@ import 'package:image_picker/image_picker.dart';
 
 import 'package:kiki/app/config/theme/app_colors.dart';
 import 'package:kiki/app/di/get_it_instance.dart';
-import 'package:kiki/app/walk_through/home/view/home_view/screen/home_screen.dart';
 import 'package:kiki/common/model/simple_data_state.dart';
 import 'package:kiki/common/util/screen_util_util.dart';
 import 'package:kiki/common/util/toast_util.dart';
@@ -288,6 +287,9 @@ class _SaveFeedScreenState extends State<SaveFeedScreen> {
                         children: [
                           GestureDetector(
                             onTap: () async {
+                              _mobileWebUrlController.text =
+                                  _mobileWebUrl ?? "";
+
                               await _showFormField(
                                 context,
                                 formKey: _mobileWebUrlFormKey,
@@ -346,6 +348,9 @@ class _SaveFeedScreenState extends State<SaveFeedScreen> {
                                           width: 220.0.autoSizeW,
                                           child: GestureDetector(
                                             onTap: () async {
+                                              _imageTitleController.text =
+                                                  _imageTitle ?? "";
+
                                               await _showFormField(
                                                 context,
                                                 formKey: _imageTitleFormKey,
@@ -369,6 +374,9 @@ class _SaveFeedScreenState extends State<SaveFeedScreen> {
                                         ),
                                         GestureDetector(
                                           onTap: () async {
+                                            _buttonTitleController.text =
+                                                _buttonTitle ?? "";
+
                                             await _showFormField(
                                               context,
                                               formKey: _buttonTitleFormKey,

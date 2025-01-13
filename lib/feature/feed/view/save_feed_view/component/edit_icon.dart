@@ -1,7 +1,7 @@
 part of 'package:kiki/feature/feed/view/save_feed_view/screen/save_feed_screen.dart';
 
 class _EditIcon extends StatelessWidget {
-  const _EditIcon({super.key});
+  const _EditIcon();
 
   @override
   Widget build(BuildContext context) {

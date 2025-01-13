@@ -1,7 +1,7 @@
 part of 'package:kiki/app/walk_through/login/view/terms_of_use_view/screen/terms_of_use_screen.dart';
 
 class _AgreeButton extends StatefulWidget {
-  const _AgreeButton({super.key});
+  const _AgreeButton();
 
   @override
   State<_AgreeButton> createState() => _AgreeButtonState();

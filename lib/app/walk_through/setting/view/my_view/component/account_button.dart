@@ -4,7 +4,6 @@ class _AccountButton extends StatelessWidget {
   final void Function() _onTap;
 
   const _AccountButton({
-    super.key,
     required void Function() onTap,
   }) : _onTap = onTap;
 

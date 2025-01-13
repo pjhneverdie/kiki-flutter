@@ -1,7 +1,7 @@
 part of 'package:kiki/app/walk_through/login/view/terms_of_use_view/screen/terms_of_use_screen.dart';
 
 class _TermsOfUse extends StatelessWidget {
-  const _TermsOfUse({super.key});
+  const _TermsOfUse();
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +54,7 @@ class _TermsOfUse extends StatelessWidget {
 class _Term extends StatelessWidget {
   final String _content;
 
-  const _Term({super.key, required String content}) : _content = content;
+  const _Term({required String content}) : _content = content;
 
   @override
   Widget build(BuildContext context) {

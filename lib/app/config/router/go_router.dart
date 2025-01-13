@@ -125,7 +125,8 @@ abstract class GoRouterModule {
           /// 카카오톡 -> 앱 딥링킹 리다이렉트
           ///
           if (state.uri.toString().startsWith("kakao")) {
-            return tracker.currentLocation;
+            return HomeScreen.PATH;
+            // return tracker.currentLocation;
           } else {
             return null;
           }

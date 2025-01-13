@@ -4,7 +4,6 @@ class _FAB extends StatelessWidget {
   final Future<void> Function() _onPressed;
 
   const _FAB({
-    super.key,
     required Future<void> Function() onPressed,
   }) : _onPressed = onPressed;
 

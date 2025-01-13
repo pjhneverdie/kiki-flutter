@@ -8,7 +8,6 @@ class _Options extends StatelessWidget {
   final void Function() _onTemplateTap;
 
   const _Options({
-    super.key,
     required void Function() onSettingTap,
     required void Function() onMyTap,
     required void Function() onTemplateTap,
@@ -20,13 +19,13 @@ class _Options extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        GestureDetector(
-          onTap: _onSettingTap,
-          child: const _OptionCard(
-            option: "앱 설정",
-            iconData: Icons.settings,
-          ),
-        ),
+        // GestureDetector(
+        //   onTap: _onSettingTap,
+        //   child: const _OptionCard(
+        //     option: "앱 설정",
+        //     iconData: Icons.settings,
+        //   ),
+        // ),
         SizedBox(
           width: 10.0.autoSizeW,
         ),
@@ -57,7 +56,6 @@ class _OptionCard extends StatelessWidget {
   final IconData _iconData;
 
   const _OptionCard({
-    super.key,
     required String option,
     required IconData iconData,
   })  : _iconData = iconData,

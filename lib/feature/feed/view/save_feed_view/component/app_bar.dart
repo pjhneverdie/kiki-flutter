@@ -1,7 +1,7 @@
 part of 'package:kiki/feature/feed/view/save_feed_view/screen/save_feed_screen.dart';
 
 class _AppBar extends StatelessWidget {
-  const _AppBar({super.key});
+  const _AppBar();
 
   @override
   Widget build(BuildContext context) {

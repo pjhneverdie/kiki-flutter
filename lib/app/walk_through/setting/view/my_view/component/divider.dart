@@ -2,7 +2,7 @@ part of 'package:kiki/app/walk_through/setting/view/my_view/screen/my_screen.dar
 
 
 class _Divider extends StatelessWidget {
-  const _Divider({super.key});
+  const _Divider();
 
   @override
   Widget build(BuildContext context) {

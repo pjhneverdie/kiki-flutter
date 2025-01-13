@@ -74,6 +74,7 @@ class _TermsOfUseScreenState extends State<TermsOfUseScreen> {
   @override
   void initState() {
     super.initState();
+
     _getMember();
   }
 
@@ -90,116 +91,119 @@ class _TermsOfUseScreenState extends State<TermsOfUseScreen> {
           context.colors.strongWhite,
           context.colors.weakBlack,
         ),
-        body: SafeArea(
-          bottom: false,
-          child: CustomOrientationBuilder(
-            portraitBuilder: (context) {
-              return Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 40.0.autoSizeW,
-                      vertical: 40.0.autoSizeH,
-                    ),
-                    child: const _Introduction(),
+        body: CustomOrientationBuilder(
+          portraitBuilder: (context) {
+            return Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 40.0.autoSizeW,
+                    vertical: 40.0.autoSizeH,
+                  ).copyWith(
+                    top: 60.0.autoSizeH,
                   ),
-                  Expanded(
-                    child: Container(
-                      color: useColorMode(
-                        context,
-                        context.colors.blueGray,
-                        context.colors.middleBlack,
-                      ),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 40.0.autoSizeW,
-                              vertical: 40.0.autoSizeH,
-                            ),
-                            child: const _TermsOfUse(),
+                  child: const _Introduction(),
+                ),
+                Expanded(
+                  child: Container(
+                    color: useColorMode(
+                      context,
+                      context.colors.blueGray,
+                      context.colors.middleBlack,
+                    ),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 40.0.autoSizeW,
+                            vertical: 40.0.autoSizeH,
                           ),
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal: 30.0.autoSizeW,
-                                  ).copyWith(
-                                    bottom: MediaQuery.viewPaddingOf(context)
-                                                .bottom ==
-                                            0
-                                        ? 15.0.autoSizeH
-                                        : MediaQuery.viewPaddingOf(context)
-                                            .bottom,
-                                  ),
-                                  child: const _AgreeButton(),
+                          child: const _TermsOfUse(),
+                        ),
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 30.0.autoSizeW,
+                                ).copyWith(
+                                  bottom: MediaQuery.viewPaddingOf(context)
+                                              .bottom ==
+                                          0
+                                      ? 15.0.autoSizeH
+                                      : MediaQuery.viewPaddingOf(context)
+                                          .bottom,
                                 ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              );
-            },
-            landscapeBuilder: (context) {
-              return Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 40.0.autoSizeW,
-                      vertical: 40..autoSizeH,
-                    ),
-                    child: const _Introduction(),
-                  ),
-                  Expanded(
-                    child: Container(
-                      color: useColorMode(
-                        context,
-                        context.colors.blueGray,
-                        context.colors.middleBlack,
-                      ),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 40.0.autoSizeW,
-                              vertical: 40.0.autoSizeH,
-                            ),
-                            child: const _TermsOfUse(),
+                                child: const _AgreeButton(),
+                              ),
+                            ],
                           ),
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal: 40.0.autoSizeW,
-                                  ).copyWith(
-                                    bottom: MediaQuery.viewPaddingOf(context)
-                                                .bottom ==
-                                            0
-                                        ? 15.0.autoSizeH
-                                        : MediaQuery.viewPaddingOf(context)
-                                            .bottom,
-                                  ),
-                                  child: const _AgreeButton(),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
+                        )
+                      ],
                     ),
                   ),
-                ],
-              );
-            },
-          ),
+                ),
+              ],
+            );
+          },
+          landscapeBuilder: (context) {
+            return Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 40.0.autoSizeW,
+                    vertical: 40..autoSizeH,
+                  ).copyWith(
+                    top: 60.0.autoSizeH,
+                  ),
+                  child: const _Introduction(),
+                ),
+                Expanded(
+                  child: Container(
+                    color: useColorMode(
+                      context,
+                      context.colors.blueGray,
+                      context.colors.middleBlack,
+                    ),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 40.0.autoSizeW,
+                            vertical: 40.0.autoSizeH,
+                          ).copyWith(
+                            top: 60.0.autoSizeH,
+                          ),
+                          child: const _TermsOfUse(),
+                        ),
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 40.0.autoSizeW,
+                                ).copyWith(
+                                  bottom: MediaQuery.viewPaddingOf(context)
+                                              .bottom ==
+                                          0
+                                      ? 15.0.autoSizeH
+                                      : MediaQuery.viewPaddingOf(context)
+                                          .bottom,
+                                ),
+                                child: const _AgreeButton(),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );

@@ -5,7 +5,6 @@ class _KakaoLoginButton extends StatefulWidget {
   final void Function() _onTap;
 
   const _KakaoLoginButton({
-    super.key,
     required bool isLoading,
     required void Function() onTap,
   })  : _onTap = onTap,

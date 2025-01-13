@@ -158,8 +158,6 @@ class DioExceptionHandler extends Interceptor {
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) async {
-    print("\n\n\n\n\n$err\n\n\n\n");
-
     /// 서버 점검 시
     ///
     if (err.response == null || err.response!.statusCode == 502) {

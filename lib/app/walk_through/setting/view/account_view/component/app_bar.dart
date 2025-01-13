@@ -1,7 +1,7 @@
 part of 'package:kiki/app/walk_through/setting/view/account_view/screen/account_screen.dart';
 
 class _AppBar extends StatelessWidget {
-  const _AppBar({super.key});
+  const _AppBar();
 
   @override
   Widget build(BuildContext context) {

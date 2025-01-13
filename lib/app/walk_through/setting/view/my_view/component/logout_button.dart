@@ -4,7 +4,6 @@ class _LogoutButton extends StatelessWidget {
   final void Function() _onTap;
 
   const _LogoutButton({
-    super.key,
     required void Function() onTap,
   }) : _onTap = onTap;
 

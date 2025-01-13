@@ -1,7 +1,7 @@
 part of 'package:kiki/app/walk_through/login/view/terms_of_use_view/screen/terms_of_use_screen.dart';
 
 class _Introduction extends StatelessWidget {
-  const _Introduction({super.key});
+  const _Introduction();
 
   @override
   Widget build(BuildContext context) {
